@@ -1,0 +1,117 @@
+/* se eu uso o '*', quer dizer que estou aplicando o comando css a toda a pagina*/
+* {
+  margin: 0; /*define a margem*/
+  padding: 0; /*define a margem interna*/
+  box-sizing: border-box; /*tipo da borda da caixa*/
+}
+
+body {
+  background-color: #09090a; /*aplica cor ao backgroud=fundo*/
+  color: white; /*aplica uma cor*/
+
+  height: 100vh; /* tamanho do body ou do grupo que quero aplicar*/
+}
+
+header {
+  display: flex; /*define a exibição, ou seja a forma que o conteudo será exibido, ou seja felixivel*/
+  align-items: center; /*alinha os itens dentro do header*/
+  justify-content: space-between; /*justifica o conteudo dentro da box, um em cada extremo.*/
+
+  padding: 48px;
+
+  position: fixed;
+  width: 100%;
+  background-color: #09090a;
+}
+
+button {
+  padding: 16px 24px;
+  border-radius: 8px; /*arredonda a borda*/
+  border: 1px solid #8b5cf6; /*espessura da borda, tipo, cor*/
+  background-color: transparent;
+  color: white;
+  padding: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px; /*define espaço entre o conteudo dentro do box, so consigo usar com disp flex*/
+
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+}
+
+#form-habits {
+  display: flex;
+
+  padding: 182px 48px 48px;
+  width: fit-content;
+}
+
+.habits {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.habit {
+  width: 64px;
+  height: 64px;
+
+  font-size: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.days {
+  display: flex;
+  gap: 48px;
+  margin-left: 32px;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day div {
+  margin-bottom: 8px;
+
+  font-family: "Roboto Mono";
+  font-size: 20px;
+  line-height: 125%;
+
+  color: white;
+
+  text-align: center;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 64px;
+  height: 64px;
+
+  border: 2px solid #27272a;
+  border-radius: 8px;
+
+  background-color: #18181b;
+}
+
+/*pseudo-selector*/
+input:checked {
+  background-color: #8b5cf6;
+  border: 2px solid #a78bfa;
+}
+
+@media (max-width: 570px) {
+  button div {
+    display: none;
+  }
+}
